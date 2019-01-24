@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyBb_8wcLsqqw09ftBFMvjpHDgHNAkY6tc0',
+    authDomain: 'ipm-groups.firebaseapp.com',
+    databaseURL: 'https://ipm-groups.firebaseio.com',
+    projectId: 'ipm-groups',
+    storageBucket: 'ipm-groups.appspot.com',
+    messagingSenderId: '679029721468'
+  },
+  settings : {
+    timestampsInSnapshots: true
+  }
 };
 
 /*

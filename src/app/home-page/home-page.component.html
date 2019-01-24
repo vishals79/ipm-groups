@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<div>
+  <ul>
+    <li *ngFor="let user of soldiers">
+      <pre>{{ user | json }}</pre>
+    </li>
+  </ul>
+</div>-->
+<div *ngIf="showWelcome" class="get-started">
+  <button type="button" class="btn btn-primary" (click)="showInputOption()">Let the game begin</button>
+</div>
+<div *ngIf="showInput" class="user-input">
+  <form>
+    <div class="form-group">
+      <input #identity type="text" placeholder="You identity..." class="form-control col-12" id="usr">
+    </div>
+    <div class="form-group">
+      <input #token type="text" placeholder="Your secret key..." class="form-control col-12" id="token">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="assignHouse()">Bend the knee</button>
+  </form>
+</div>
+
+<div #myNav [className]="overlayClass" (click)="closeNav()" *ngIf="showError">
+  <div class="overlay-content">
+    <img src="../assets/ipm-groups-error.png" width="250px">
+    <span>Intruder!!! You will be sent beyond the wall</span>
+  </div>
+</div>
+
+<div #myNav [className]="overlayClass" (click)="closeNav()" *ngIf="houseExists">
+  <div class="overlay-content">
+    <img src="../assets/green_check.svg" width="250px">
+    <span>You already have a house</span>
+  </div>
+</div>
+
+<div class="container" *ngIf="showAssignedGroup">
+  <div class="card soldiers-card">
+    <img class="card-img-top" [src]="assignedHouseImageUrl" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">{{userName}}</h4>
+      <p class="card-text">You have been assigned {{assignedHouseData['name']}} house</p>
+      <a routerLink="/view-results" class="btn btn-primary">See Results</a>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" *ngFor="let house of houses">
+    <div class="col-4 p-5" *ngFor="let member of house['members']">
+      <div class="card soldiers-card" *ngIf="member">
+        <img class="card-img-top" [src]="imagePath+house['name']+'.jpg'" alt="Card image" style="width:100%">
+        <div class="card-body center">
+          <h4 class="card-title">{{soldiers[member]}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

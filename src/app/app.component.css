@@ -1,0 +1,21 @@
+.title {
+  text-align:center;
+  padding-top: 10px;
+}
+
+.title span {
+  padding: 8px;
+  text-decoration: aliceblue;
+  font-size: 70px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.image {
+  width: auto;
+}
+
+.showCursor {
+  cursor: pointer;
+}
