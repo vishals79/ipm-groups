@@ -7,5 +7,7 @@ export const environment = {
     projectId: 'ipm-groups',
     storageBucket: 'ipm-groups.appspot.com',
     messagingSenderId: '679029721468'
+  }, settings : {
+    timestampsInSnapshots: true
   }
 };
