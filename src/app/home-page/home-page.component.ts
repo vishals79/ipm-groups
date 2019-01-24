@@ -35,7 +35,6 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
     firebase.initializeApp(environment.firebase);
-    firebase.firestore().settings(environment.settings);
     const soldiersRef = firebase.database().ref('/soldiers');
     soldiersRef.on('value', function (snapshot) {
       console.log(snapshot.val());
