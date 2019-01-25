@@ -25,3 +25,23 @@
 .showCursor {
   cursor: pointer;
 }
+
+img.bg {
+  min-height: 50%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  left: 50%;
+  margin-left: -512px;
+  top: 208px;
+
+}
+
+@media screen and (max-width: 568px){
+  img.bg {
+    left: 50%;
+    margin-left: -512px;
+    top: 208px;
+  }
+}
