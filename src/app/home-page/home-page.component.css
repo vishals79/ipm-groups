@@ -4,10 +4,18 @@
 }
 
 .user-input {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /*position: absolute;*/
+  /*top: 45%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  display: flex;
+  justify-content: center;
+}
+
+.user-input form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .overlay {
@@ -76,7 +84,7 @@
 }
 
 .soldiers-card {
-  width:400px;
-  margin-left: 300px;
+  text-align: center;
+  max-width: 300px;
   margin-top: 50px;
 }
