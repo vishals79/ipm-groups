@@ -6,6 +6,9 @@
     </li>
   </ul>
 </div>-->
+<div *ngIf="showComingSoon" class="coming-soon">
+  <span>Game will begin on 28th Jan, 12:30 PM</span>
+</div>
 <div *ngIf="showWelcome" class="get-started">
   <button type="button" class="btn btn-primary" (click)="showInputOption()">Let the game begin</button>
 </div>
@@ -15,7 +18,7 @@
       <input #identity type="text" placeholder="You identity..." class="form-control col-12" id="usr">
     </div>
     <div class="form-group">
-      <input #token type="text" placeholder="Your secret key..." class="form-control col-12" id="token">
+      <input #token type="password" placeholder="Your secret key..." class="form-control col-12" id="token">
     </div>
     <button type="button" class="btn btn-primary" (click)="assignHouse()">Bend the knee</button>
   </form>
