@@ -1,11 +1,16 @@
-<div slot="main" class="showCursor" (click)="showHomePage()">
-  <div class="title">
-  <span>
-    {{ title }}!
-  </span>
-    <img class="image" width="200px" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Game_of_Thrones_2011_logo.svg">
-    <audio src="../assets/music.mp3" autoplay></audio>
+<div slot="main" class="container showCursor" (click)="showHomePage()">
+  <div class="title row">
+    <div class="col-12">
+      <span>
+        {{ title }}!
+      </span>
+      <img class="image" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Game_of_Thrones_2011_logo.svg">
+      <audio src="../assets/music.mp3"></audio>
+    </div>
   </div>
-  <!--<app-auth-check></app-auth-check>-->
-  <router-outlet></router-outlet>
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

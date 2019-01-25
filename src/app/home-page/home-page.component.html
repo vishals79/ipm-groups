@@ -9,7 +9,7 @@
 <div *ngIf="showWelcome" class="get-started">
   <button type="button" class="btn btn-primary" (click)="showInputOption()">Let the game begin</button>
 </div>
-<div *ngIf="showInput" class="user-input">
+<div *ngIf="showInput" class="user-input mt-5">
   <form>
     <div class="form-group">
       <input #identity type="text" placeholder="You identity..." class="form-control col-12" id="usr">
@@ -35,9 +35,9 @@
   </div>
 </div>
 
-<div class="container" *ngIf="showAssignedGroup">
+<div style="display: flex; justify-content: center;" *ngIf="showAssignedGroup">
   <div class="card soldiers-card">
-    <img class="card-img-top" [src]="assignedHouseImageUrl" alt="Card image" style="width:100%">
+    <img class="card-img-top" [src]="assignedHouseImageUrl" alt="Card image">
     <div class="card-body">
       <h4 class="card-title">{{userName}}</h4>
       <p class="card-text">You have been assigned {{assignedHouseData['name']}} house</p>

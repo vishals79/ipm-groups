@@ -12,8 +12,14 @@
   transition: 0.3s;
 }
 
+@media all and (max-width: 576px) {
+  .title span{
+    font-size: 40px;
+  }
+}
+
 .image {
-  width: auto;
+  width: 100%;
 }
 
 .showCursor {
