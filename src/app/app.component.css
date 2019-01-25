@@ -32,16 +32,19 @@ img.bg {
   width: 100%;
   height: auto;
   position: fixed;
-  left: 50%;
-  margin-left: -512px;
-  top: 208px;
-
+  left: 0%;
+  top: 0
 }
 
-@media screen and (max-width: 568px){
+@media screen and (max-width: 1024px){
   img.bg {
     left: 50%;
     margin-left: -512px;
-    top: 208px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  img.bg {
+    bottom: 0;
   }
 }
