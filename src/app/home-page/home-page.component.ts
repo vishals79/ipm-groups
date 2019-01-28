@@ -16,8 +16,8 @@ export class HomePageComponent implements OnInit {
   maxNoOfMember = 6;
 
   showInput = false;
-  showComingSoon = true;
-  showWelcome = false;
+  showComingSoon = false;
+  showWelcome = true;
   showAssignedGroup = false;
   showGroups = false;
   overlayClass: any;
