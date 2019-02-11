@@ -1,15 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
-import {environment} from '../environments/environment';
-import {AppRouting} from './app-routing.module';
+import { environment } from '../environments/environment';
+import { AppRouting } from './app-routing.module';
+import { TeamsPageComponent } from './teams-page/teams-page.component';
+import { TeamsService } from './teams-page/teams.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeamsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,7 @@ import {AppRouting} from './app-routing.module';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [],
+  providers: [TeamsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
