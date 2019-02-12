@@ -14,8 +14,8 @@ export class TeamsPageComponent implements OnInit {
   constructor(private service: TeamsService) { }
 
   ngOnInit() {
-    this.service.getTeams().on('value', (res) => {
-      this.teams = res.val();
+    this.service.getTeams().on('value', (ref) => {
+      this.teams = ref.val();
     });
   }
 

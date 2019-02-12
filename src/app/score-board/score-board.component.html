@@ -1,0 +1,46 @@
+<div>
+    <h2 class="title">Points Table</h2>
+    <table class='score-table'>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Team</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let team of points;let i=index;">
+          <td>{{i+1}}</td>
+          <td>{{team.name}}</td>
+          <td>{{team.points}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+<div>
+  <h2 class="title">Match Table</h2>
+  <table class='score-table'>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Game</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Winner</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let match of matches;let i=index;">
+        <td>{{i+1}}</td>
+        <td>{{match.game}}</td>
+        <td>{{match.team1.name}}</td>
+        <td>{{match.team2.name}}</td>
+        <td>{{match.team1.points > match.team2.points?match.team1.name:match.team2.name}}</td>
+        <td>{{match.team1.points > match.team2.points?match.team1.points:match.team2.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

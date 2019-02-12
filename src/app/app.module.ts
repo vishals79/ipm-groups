@@ -8,11 +8,13 @@ import { environment } from '../environments/environment';
 import { AppRouting } from './app-routing.module';
 import { TeamsPageComponent } from './teams-page/teams-page.component';
 import { TeamsService } from './teams-page/teams.service';
+import { ScoreBoardComponent } from './score-board/score-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TeamsPageComponent
+    TeamsPageComponent,
+    ScoreBoardComponent
   ],
   imports: [
     BrowserModule,

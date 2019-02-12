@@ -6,11 +6,23 @@
     </li>
   </ul>
 </div>-->
+<div class="title row">
+  <div class="col-12">
+    <span>
+      {{ title }}!
+    </span>
+    <img class="image" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Game_of_Thrones_2011_logo.svg">
+    <audio src="../assets/music.mp3" autoplay></audio>
+  </div>
+</div>
+
 <div *ngIf="showComingSoon" class="coming-soon">
   <span>Game will begin on 28th Jan, 12:30 PM</span>
 </div>
 <div *ngIf="showWelcome" class="get-started">
-  <button type="button" class="btn btn-primary" (click)="showInputOption()">Let the game begin</button>
+  <button type="button" class="btn btn-primary" (click)="showInputOption()">Let the game begin</button><br />
+  <a href="/teams" class="btn btn-primary">Teams</a><br />
+  <a href="/score-board" class="btn btn-primary">Score Board</a><br />
 </div>
 <div *ngIf="showInput" class="user-input mt-5">
   <form>
@@ -47,4 +59,3 @@
     </div>
   </div>
 </div>
-
