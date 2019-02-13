@@ -1,22 +1,28 @@
 <div>
-    <h2 class="title">Points Table</h2>
-    <table class='score-table'>
-      <thead>
-        <tr>
-          <th>S.No</th>
-          <th>Team</th>
-          <th>Points</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let team of points;let i=index;">
-          <td>{{i+1}}</td>
-          <td>{{team.name}}</td>
-          <td>{{team.points}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <h2 class="title">Points Table</h2>
+  <table class='score-table'>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Team</th>
+        <th>Played</th>
+        <th>Won</th>
+        <th>Lose</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of points;let i=index;">
+        <td>{{i+1}}</td>
+        <td>{{team.name}}</td>
+        <td>{{team.matches}}</td>
+        <td>{{team.won}}</td>
+        <td>{{team.lose}}</td>
+        <td>{{team.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 <div>
