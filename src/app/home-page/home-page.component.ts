@@ -1,7 +1,7 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {environment} from '../../environments/environment';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { environment } from '../../environments/environment';
 import * as firebase from 'firebase';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -39,6 +39,7 @@ export class HomePageComponent implements OnInit {
     const soldiersRef = firebase.database().ref('/soldiers');
     soldiersRef.on('value', function (snapshot) {
       this.soldiers = snapshot.val();
+      console.log(this.soldiers);
     }, this);
 
     const housesRef = firebase.database().ref('/houses');
@@ -69,7 +70,7 @@ export class HomePageComponent implements OnInit {
       this.openNav();
       return;
     } else {
-      const userData = this.soldiers.filter( s => s.id === this.userIdentity);
+      const userData = this.soldiers.filter(s => s.id === this.userIdentity);
       if (userData.length === 0) {
         this.openNav();
         return;
@@ -101,18 +102,18 @@ export class HomePageComponent implements OnInit {
             count++;
           }
         });
-         const soldierRef = firebase.database().ref(`/soldiers/${soldierId}/isHouseAssigned`);
-         updates = [true];
-         soldierRef.update(updates).then(() => {
-           this.showAssignedGroup = true;
-           this.assignedHouseData = assignedHouse;
-           this.assignedHouseImageUrl = `../../assets/${this.assignedHouseData['name']}.jpg`;
-         }).catch(error => {
-           console.log('error occurred' + error);
-         });
-      }).catch((error) => {
+        const soldierRef = firebase.database().ref(`/soldiers/${soldierId}/isHouseAssigned`);
+        updates = [true];
+        soldierRef.update(updates).then(() => {
+          this.showAssignedGroup = true;
+          this.assignedHouseData = assignedHouse;
+          this.assignedHouseImageUrl = `../../assets/${this.assignedHouseData['name']}.jpg`;
+        }).catch(error => {
           console.log('error occurred' + error);
-        }
+        });
+      }).catch((error) => {
+        console.log('error occurred' + error);
+      }
       );
     }
   }
